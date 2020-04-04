@@ -146,7 +146,7 @@ func main() {
 			Name: "test-deployment",
 		},
 		Spec: appsv1.DeploymentSpec{
-			Replicas: ptrint32(2),
+			Replicas: print32(2),
 			Selector: &metav1.LabelSelector{
 				MatchLabels: map[string]string{
 					"app": "demo",
@@ -190,7 +190,7 @@ func main() {
 	fmt.Println("Deployment Created successfully!")
 }
 
-func ptrint32(p int32) *int32 {
+func print32(p int32) *int32 {
 	return &p
 }
   `)
